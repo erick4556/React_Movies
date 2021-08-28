@@ -1,23 +1,23 @@
 import http from "../http-commom";
 
 const getAll = async () => {
-  return http.get("movies");
+  return await http.get("movies");
 };
 
 const getById = async (id) => {
-  return http.get(`movies/${id}`);
+  return await http.get(`movies/${id}`);
 };
 
 const create = async (data) => {
-  return http.post("movies", data);
+  return await http.post("movies", data);
 };
 
 const update = async (id, data) => {
-  return http.put(`movies/${id}`, data);
+  return await http.put(`movies/${id}`, data);
 };
 
 const remove = async (id) => {
-  return http.delete(`movies/${id}`);
+  return await http.delete(`movies/${id}`);
 };
 
 export default {
